@@ -158,7 +158,6 @@ a {
 }
 
 .hero-image:after {
-    content: "ACTUAL CART PHOTO";
     position: absolute;
     inset: auto 20px 20px auto;
     background: rgba(0, 0, 0, .72);
@@ -387,16 +386,6 @@ h2 {
     align-items: end
 }
 
-.gallery-placeholder span {
-    background: rgba(0, 0, 0, .75);
-    border: 1px solid #30343a;
-    padding: 10px 14px;
-    border-radius: 10px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #bbb
-}
-
 .features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -502,6 +491,33 @@ h2 {
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 20px
+}
+
+.location-card {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 25px;
+    align-items: center;
+}
+
+.location-content {
+    min-width: 0;
+}
+
+.map-container {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #181a1c;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
 }
 
 footer {
