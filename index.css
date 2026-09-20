@@ -634,11 +634,10 @@ footer b {
 }
 
 /* =========================================================
-   GK ROYAL — RESPONSIVE MOBILE PATCH
-   Designed for small Android/iPhone screens and tablets.
+   GK ROYAL — FINAL RESPONSIVE SYSTEM
+   Mobile-first refinements for Android, iPhone and tablets
    ========================================================= */
 
-/* Prevent iOS text inflation and horizontal overflow */
 html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -667,13 +666,28 @@ select {
     font: inherit;
 }
 
-/* Better touch targets */
 a,
 button {
     touch-action: manipulation;
 }
 
-/* ---------- LARGE TABLET / SMALL LAPTOP ---------- */
+/* ---------- 1200px and below ---------- */
+@media (max-width: 1200px) {
+    .container {
+        width: min(94%, 1080px);
+    }
+
+    .hero-grid {
+        gap: 45px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 560px;
+    }
+}
+
+/* ---------- 1024px and below ---------- */
 @media (max-width: 1024px) {
     .container {
         width: min(94%, 960px);
@@ -684,29 +698,80 @@ button {
     }
 
     .hero-grid {
-        gap: 45px;
+        gap: 38px;
+    }
+
+    h1 {
+        font-size: clamp(62px, 8vw, 92px);
     }
 
     .hero-image {
         height: 500px;
     }
 
-    h1 {
-        font-size: clamp(64px, 9vw, 96px);
-    }
-
     .menu-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ---------- 900px and below ---------- */
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: min(58vw, 440px);
+        min-height: 310px;
+        max-height: 440px;
+    }
+
+    .hero-copy {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .hero-copy > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .actions {
+        justify-content: center;
     }
 
     .about-grid,
     .qr-grid,
     .contact-grid {
-        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .qr-copy {
+        text-align: center;
+    }
+
+    .qr-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qr-card {
+        justify-self: center;
+    }
+
+    .location-card {
+        grid-template-columns: 1fr 280px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-/* ---------- TABLET ---------- */
+/* ---------- 768px and below ---------- */
 @media (max-width: 768px) {
     .container {
         width: min(92%, 680px);
@@ -717,11 +782,16 @@ button {
     }
 
     .nav-inner {
-        min-height: 68px;
+        height: 68px;
     }
 
     .brand {
-        font-size: 23px;
+        font-size: 22px;
+    }
+
+    .brand img {
+        width: 46px;
+        height: 46px;
     }
 
     .nav-btn {
@@ -737,41 +807,19 @@ button {
         padding: 105px 0 55px;
     }
 
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
     .hero-image {
-        width: 100%;
-        height: min(62vw, 440px);
-        min-height: 300px;
-        max-height: 440px;
+        height: min(62vw, 430px);
+        min-height: 290px;
         border-radius: 22px;
-        background-position: center center;
-    }
-
-    .hero-image:after {
-        right: 12px;
-        bottom: 12px;
-        font-size: 8px;
-        padding: 7px 10px;
-    }
-
-    .hero-copy {
-        text-align: center;
-        max-width: 650px;
-        margin: 0 auto;
     }
 
     .eyebrow {
         font-size: 10px;
         letter-spacing: 3px;
-        line-height: 1.5;
     }
 
     h1 {
-        font-size: clamp(64px, 14vw, 92px);
+        font-size: clamp(58px, 13vw, 88px);
         line-height: .86;
     }
 
@@ -780,16 +828,9 @@ button {
         margin: 18px 0 12px;
     }
 
-    .hero-copy>p {
-        max-width: 600px;
+    .hero-copy > p {
         font-size: 15px;
         line-height: 1.7;
-    }
-
-    .actions {
-        justify-content: center;
-        gap: 10px;
-        margin-top: 22px;
     }
 
     .btn {
@@ -797,7 +838,6 @@ button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 12px 18px;
     }
 
     .info-grid {
@@ -819,10 +859,6 @@ button {
 
     section {
         padding: 72px 0;
-    }
-
-    .section-head {
-        margin-bottom: 30px;
     }
 
     h2 {
@@ -855,12 +891,6 @@ button {
         overflow-wrap: anywhere;
     }
 
-    .about-grid,
-    .qr-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
     .story,
     .gallery-placeholder,
     .contact-card {
@@ -871,29 +901,21 @@ button {
         min-height: 300px;
     }
 
-    .qr-copy {
-        text-align: center;
-    }
-
     .qr-copy h2 {
         font-size: clamp(42px, 9vw, 58px);
     }
 
-    .qr-copy p {
-        margin: 0 auto;
+    .location-card {
+        grid-template-columns: 1fr 250px;
+        gap: 20px;
     }
 
-    .qr-card {
-        justify-self: center;
-    }
-
-    .features {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+    .map-container {
+        height: 210px;
     }
 }
 
-/* ---------- NORMAL PHONES ---------- */
+/* ---------- 600px and below: real phone layout ---------- */
 @media (max-width: 600px) {
     .container {
         width: calc(100% - 28px);
@@ -905,18 +927,7 @@ button {
     }
 
     .nav-inner {
-        min-height: 62px;
-    }
-
-    .brand {
-        font-size: 21px;
-        letter-spacing: 1px;
-    }
-
-    .nav-btn {
-        font-size: 12px;
-        min-height: 40px;
-        padding: 8px 13px;
+        height: 62px;
     }
 
     .nav-links {
@@ -926,6 +937,7 @@ button {
     .brand {
         font-size: 20px;
         gap: 8px;
+        letter-spacing: 1px;
     }
 
     .brand img {
@@ -935,24 +947,24 @@ button {
 
     .nav-btn {
         font-size: 11px;
+        min-height: 40px;
         padding: 8px 12px;
     }
-
 
     .hero {
         padding: 88px 0 42px;
     }
 
     .hero-grid {
-        gap: 25px;
+        gap: 24px;
     }
 
     .hero-image {
+        width: 100%;
         height: 82vw;
-        min-height: 280px;
+        min-height: 260px;
         max-height: 390px;
         border-radius: 18px;
-        box-shadow: 0 20px 45px rgba(0, 0, 0, .45);
     }
 
     .hero-image:after {
@@ -961,12 +973,13 @@ button {
 
     .eyebrow {
         font-size: 9px;
-        letter-spacing: 2.2px;
-        margin-bottom: 11px;
+        letter-spacing: 2.1px;
+        line-height: 1.5;
+        margin-bottom: 10px;
     }
 
     h1 {
-        font-size: clamp(56px, 17vw, 78px);
+        font-size: clamp(53px, 17vw, 76px);
         letter-spacing: -.5px;
     }
 
@@ -975,7 +988,7 @@ button {
         margin: 15px 0 10px;
     }
 
-    .hero-copy>p {
+    .hero-copy > p {
         font-size: 14px;
         line-height: 1.65;
     }
@@ -1009,7 +1022,7 @@ button {
 
     .info b {
         font-size: 9px;
-        margin-bottom: 2px;
+        letter-spacing: 1.5px;
     }
 
     .info span {
@@ -1068,10 +1081,6 @@ button {
         padding: 10px 0;
         font-size: 14px;
         line-height: 1.35;
-    }
-
-    .about-grid {
-        gap: 13px;
     }
 
     .story,
@@ -1151,6 +1160,24 @@ button {
     .contact-card h3 {
         font-size: 34px;
         line-height: 1;
+        overflow-wrap: anywhere;
+    }
+
+    /* Location card: keep map on the right while there is room */
+    .location-card {
+        grid-template-columns: minmax(0, 1fr) 150px;
+        gap: 14px;
+        align-items: center;
+    }
+
+    .map-container {
+        height: 185px;
+        border-radius: 13px;
+    }
+
+    .contact-actions .btn {
+        width: auto;
+        flex: 0 1 auto;
     }
 
     footer {
@@ -1159,18 +1186,34 @@ button {
     }
 }
 
-/* ---------- VERY SMALL PHONES: 320–380px ---------- */
+/* ---------- 430px and below ---------- */
+@media (max-width: 430px) {
+    .location-card {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 210px;
+    }
+}
+
+/* ---------- 380px and below ---------- */
 @media (max-width: 380px) {
     .container {
         width: calc(100% - 22px);
     }
 
     .brand {
-        font-size: 19px;
+        font-size: 18px;
+    }
+
+    .brand img {
+        width: 39px;
+        height: 39px;
     }
 
     .nav-btn {
-        font-size: 11px;
+        font-size: 10px;
         padding: 8px 10px;
     }
 
@@ -1180,19 +1223,19 @@ button {
 
     .hero-image {
         height: 78vw;
-        min-height: 245px;
+        min-height: 235px;
         border-radius: 15px;
     }
 
     h1 {
-        font-size: clamp(51px, 17vw, 64px);
+        font-size: clamp(49px, 17vw, 63px);
     }
 
     .script {
         font-size: 16px;
     }
 
-    .hero-copy>p {
+    .hero-copy > p {
         font-size: 13px;
     }
 
@@ -1216,10 +1259,6 @@ button {
         font-size: 13px;
     }
 
-    .features {
-        gap: 7px;
-    }
-
     .feature {
         padding: 15px 7px;
     }
@@ -1238,15 +1277,55 @@ button {
     }
 }
 
-/* ---------- LANDSCAPE PHONES ---------- */
+/* ---------- 340px and below ---------- */
+@media (max-width: 340px) {
+    .container {
+        width: calc(100% - 18px);
+    }
+
+    .brand {
+        font-size: 17px;
+    }
+
+    .brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-btn {
+        padding: 7px 8px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        min-height: 220px;
+    }
+
+    .actions .btn {
+        font-size: 12px;
+    }
+
+    .item {
+        font-size: 12.5px;
+    }
+}
+
+/* ---------- Landscape phones ---------- */
 @media (max-height: 500px) and (orientation: landscape) {
     .nav {
         height: 56px;
     }
 
+    .nav-inner {
+        height: 56px;
+    }
+
     .hero {
         min-height: auto;
-        padding: 78px 0 35px;
+        padding: 76px 0 35px;
     }
 
     .hero-grid {
@@ -1256,13 +1335,14 @@ button {
 
     .hero-image {
         height: 300px;
+        min-height: 0;
     }
 
     h1 {
-        font-size: clamp(48px, 9vw, 70px);
+        font-size: clamp(46px, 9vw, 70px);
     }
 
-    .hero-copy>p {
+    .hero-copy > p {
         font-size: 13px;
     }
 
@@ -1275,9 +1355,8 @@ button {
     }
 }
 
-/* ---------- TOUCH DEVICES: remove hover jump ---------- */
+/* ---------- Touch devices ---------- */
 @media (hover: none) and (pointer: coarse) {
-
     .btn:hover,
     .menu-card:hover {
         transform: none;
@@ -1289,7 +1368,7 @@ button {
     }
 }
 
-/* ---------- SAFE AREA FOR iPHONES ---------- */
+/* ---------- iPhone safe areas ---------- */
 @supports (padding: max(0px)) {
     .nav {
         padding-top: env(safe-area-inset-top);
