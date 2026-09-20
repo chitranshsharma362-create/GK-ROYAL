@@ -1,0 +1,79 @@
+  * {
+      box-sizing: border-box
+  }
+
+  body {
+      margin: 0;
+      background: #08090a;
+      color: #fff;
+      font-family: "DM Sans", sans-serif
+  }
+
+  .wrap {
+      width: min(850px, 92%);
+      margin: auto
+  }
+
+  header {
+      text-align: center;
+      padding: 34px 0 24px;
+      border-bottom: 1px solid #292d31
+  }
+
+  .logo {
+      width: 110px;
+      border-radius: 50%
+  }
+
+  h1 {
+      font: 600 44px Oswald;
+      margin: 12px 0 0
+  }
+
+  h1 span {
+      color: #f5b51b
+  }
+
+  .tag {
+      font: 18px Pacifico;
+      color: #f5b51b;
+      margin-top: 6px
+  }
+
+  main {
+      padding: 35px 0
+  }
+
+  .cat {
+      margin-bottom: 34px
+  }
+
+  .cat h2 {
+      font: 600 29px Oswald;
+      color: #f5b51b;
+      border-left: 4px solid #f5b51b;
+      padding-left: 12px
+  }
+
+  .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 7px;
+      border-bottom: 1px dashed #35393d
+  }
+
+  .price {
+      color: #f5b51b;
+      font-weight: 800
+  }
+
+  footer {
+      text-align: center;
+      border-top: 1px solid #292d31;
+      padding: 25px;
+      color: #8d9298
+  }
+
+  footer b {
+      color: #f5b51b
+  }
