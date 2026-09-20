@@ -448,14 +448,19 @@ h2 {
     justify-self: center
 }
 
-.qr-fake {
-    height: 210px;
-    width: 210px;
-    margin: auto auto 14px;
-    background: repeating-linear-gradient(45deg, #111 0 3px, #fff 3px 7px);
-    display: grid;
-    place-items: center;
-    font-weight: 900
+.qr-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-box img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 14px;
+    background: #fff;
+    padding: 10px;
 }
 
 .qr-card small {
