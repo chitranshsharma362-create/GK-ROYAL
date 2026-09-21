@@ -38,9 +38,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 .menu-header {
     text-align: center;
@@ -75,9 +75,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================
    MENU
-========================= */
+========================================= */
 
 .menu {
     padding: 28px 0;
@@ -87,9 +87,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================
    CATEGORY
-========================= */
+========================================= */
 
 .menu-card {
     display: grid;
@@ -105,13 +105,15 @@ img {
 }
 
 
-/* =========================
+/* =========================================
    IMAGE
-========================= */
+   DESKTOP — SAME AS BEFORE
+========================================= */
 
 .category-image {
     width: 125px;
     height: 125px;
+
     overflow: hidden;
     background: #17191b;
 }
@@ -119,13 +121,15 @@ img {
 .category-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+    object-position: center;
 }
 
 
-/* =========================
+/* =========================================
    CONTENT
-========================= */
+========================================= */
 
 .category-content {
     padding: 15px 20px;
@@ -139,14 +143,16 @@ img {
     font-family: "Oswald", sans-serif;
     font-size: 25px;
     font-weight: 600;
+
     color: #f5b51b;
+
     margin-bottom: 7px;
 }
 
 
-/* =========================
+/* =========================================
    ITEMS
-========================= */
+========================================= */
 
 .menu-list {
     width: 100%;
@@ -183,9 +189,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================
    HALF / FULL
-========================= */
+========================================= */
 
 .sizes {
     display: flex;
@@ -203,6 +209,7 @@ img {
     align-items: center;
 
     background: #0b0d0e;
+
     border: 1px solid #34383c;
     border-radius: 6px;
 }
@@ -221,9 +228,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================
    BACK BUTTON
-========================= */
+========================================= */
 
 .back-home {
     text-align: center;
@@ -249,9 +256,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
     text-align: center;
@@ -284,9 +291,10 @@ footer span {
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* =========================================
+   MOBILE
+   Layout becomes compact list
+========================================= */
 
 @media (max-width: 600px) {
 
@@ -317,11 +325,8 @@ footer span {
         gap: 10px;
     }
 
-    /*
-       MOBILE:
-       Small image left
-       Menu list right
-    */
+
+    /* Compact card */
 
     .menu-card {
         grid-template-columns: 82px 1fr;
@@ -330,11 +335,36 @@ footer span {
         border-radius: 11px;
     }
 
+
+    /* Mobile image:
+       FULL IMAGE visible
+       NO CROP
+    */
+
     .category-image {
         width: 82px;
-        height: 100%;
+        height: 105px;
         min-height: 105px;
+
+        background: #0d0f10;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
     }
+
+    .category-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+
+        padding: 2px;
+    }
+
 
     .category-content {
         padding: 10px 12px;
@@ -345,16 +375,20 @@ footer span {
         margin-bottom: 4px;
     }
 
+
     .menu-row {
         min-height: 32px;
         padding: 3px 0;
+
         font-size: 12.5px;
+
         gap: 8px;
     }
 
     .price {
         font-size: 13px;
     }
+
 
     .sizes {
         gap: 3px;
@@ -374,6 +408,7 @@ footer span {
         font-size: 10px;
     }
 
+
     .back-home {
         padding-top: 5px;
         padding-bottom: 25px;
@@ -385,9 +420,9 @@ footer span {
 }
 
 
-/* =========================
+/* =========================================
    SMALL PHONES
-========================= */
+========================================= */
 
 @media (max-width: 380px) {
 
@@ -417,15 +452,33 @@ footer span {
         padding: 18px 0;
     }
 
+
     .menu-card {
         grid-template-columns: 72px 1fr;
         min-height: 95px;
     }
 
+
+    /* Full image visible on small phones */
+
     .category-image {
         width: 72px;
+        height: 95px;
         min-height: 95px;
+
+        background: #0d0f10;
     }
+
+    .category-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+
+        padding: 2px;
+    }
+
 
     .category-content {
         padding: 8px 10px;
@@ -454,75 +507,50 @@ footer span {
 }
 
 
-/* =========================
-   PRODUCT IMAGE
-========================= */
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
 
-.category-image {
-    width: 125px;
-    height: 125px;
-    background: #0d0f10;
-    overflow: hidden;
+@media (max-width: 330px) {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    .page {
+        width: calc(100% - 12px);
+    }
 
-.category-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-    object-position: center;
-
-    padding: 3px;
-}
-
-
-/* =========================
-   MOBILE IMAGE
-========================= */
-
-@media (max-width: 600px) {
+    .menu-card {
+        grid-template-columns: 64px 1fr;
+        min-height: 88px;
+    }
 
     .category-image {
-        width: 82px;
-        min-height: 105px;
-        height: 100%;
-
-        background: #0d0f10;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 64px;
+        height: 88px;
+        min-height: 88px;
     }
 
-    .category-image img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: contain;
-        object-position: center;
-
-        padding: 2px;
-    }
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 380px) {
-
-    .category-image {
-        width: 72px;
-        min-height: 95px;
+    .category-content {
+        padding: 7px 8px;
     }
 
-    .category-image img {
-        padding: 2px;
+    .category-content h2 {
+        font-size: 18px;
     }
 
+    .menu-row {
+        font-size: 10.5px;
+        min-height: 26px;
+    }
+
+    .price {
+        font-size: 11px;
+    }
+
+    .sizes div {
+        min-width: 38px;
+        padding: 2px 3px;
+    }
+
+    .sizes strong {
+        font-size: 8.5px;
+    }
 }
