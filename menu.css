@@ -5,7 +5,6 @@
 }
 
 html {
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -23,7 +22,7 @@ body::before {
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    opacity: .13;
+    opacity: .12;
     background-image: radial-gradient(#fff .6px, transparent .6px);
     background-size: 22px 22px;
 }
@@ -34,7 +33,7 @@ img {
 }
 
 .page {
-    width: min(900px, calc(100% - 32px));
+    width: min(850px, calc(100% - 30px));
     margin: auto;
 }
 
@@ -45,24 +44,23 @@ img {
 
 .menu-header {
     text-align: center;
-    padding: 42px 0 32px;
+    padding: 38px 0 28px;
     border-bottom: 1px solid #292d31;
 }
 
 .logo {
-    width: 105px;
-    height: 105px;
+    width: 95px;
+    height: 95px;
     object-fit: contain;
-    margin: 0 auto 16px;
+    margin: 0 auto 14px;
     border-radius: 50%;
 }
 
 .menu-header h1 {
     font-family: "Oswald", sans-serif;
-    font-size: clamp(34px, 6vw, 46px);
+    font-size: 43px;
     font-weight: 600;
     line-height: 1;
-    letter-spacing: .4px;
 }
 
 .menu-header h1 span {
@@ -70,10 +68,10 @@ img {
 }
 
 .tag {
-    margin-top: 9px;
+    margin-top: 8px;
     color: #f5b51b;
     font-family: "Pacifico", cursive;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 
@@ -82,25 +80,26 @@ img {
 ========================= */
 
 .menu {
-    padding: 34px 0;
+    padding: 28px 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
 
 /* =========================
-   CATEGORY CARD
+   CATEGORY
 ========================= */
 
 .menu-card {
     display: grid;
-    grid-template-columns: 270px 1fr;
+    grid-template-columns: 125px 1fr;
+    min-height: 125px;
 
     background: #111315;
 
     border: 1px solid #292d31;
-    border-radius: 18px;
+    border-radius: 14px;
 
     overflow: hidden;
 }
@@ -111,8 +110,9 @@ img {
 ========================= */
 
 .category-image {
-    width: 100%;
-    height: 215px;
+    width: 125px;
+    height: 125px;
+    overflow: hidden;
     background: #17191b;
 }
 
@@ -128,7 +128,8 @@ img {
 ========================= */
 
 .category-content {
-    padding: 24px 28px;
+    padding: 15px 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,10 +137,10 @@ img {
 
 .category-content h2 {
     font-family: "Oswald", sans-serif;
-    font-size: 29px;
+    font-size: 25px;
     font-weight: 600;
     color: #f5b51b;
-    margin-bottom: 13px;
+    margin-bottom: 7px;
 }
 
 
@@ -152,19 +153,19 @@ img {
 }
 
 .menu-row {
-    min-height: 46px;
+    min-height: 36px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 15px;
+    gap: 12px;
 
-    padding: 8px 0;
+    padding: 5px 0;
 
     border-bottom: 1px dashed #35393d;
 
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .menu-row:last-child {
@@ -172,7 +173,7 @@ img {
 }
 
 .menu-row span {
-    color: #f2f2f2;
+    color: #f1f1f1;
 }
 
 .price {
@@ -189,34 +190,33 @@ img {
 .sizes {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .sizes div {
-    min-width: 58px;
+    min-width: 52px;
 
-    padding: 5px 7px;
+    padding: 3px 6px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    border: 1px solid #34383c;
-    border-radius: 7px;
-
     background: #0b0d0e;
+    border: 1px solid #34383c;
+    border-radius: 6px;
 }
 
 .sizes small {
     color: #858b90;
-    font-size: 8px;
+    font-size: 7px;
     font-weight: 700;
-    letter-spacing: .7px;
+    letter-spacing: .6px;
 }
 
 .sizes strong {
     color: #f5b51b;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 800;
 }
 
@@ -227,7 +227,7 @@ img {
 
 .back-home {
     text-align: center;
-    padding-bottom: 35px;
+    padding: 0 0 30px;
 }
 
 .back-home a {
@@ -235,8 +235,8 @@ img {
     align-items: center;
     justify-content: center;
 
-    min-height: 44px;
-    padding: 10px 22px;
+    min-height: 42px;
+    padding: 9px 20px;
 
     border: 1px solid #f5b51b;
     border-radius: 9px;
@@ -244,7 +244,7 @@ img {
     color: #f5b51b;
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
 }
 
@@ -258,29 +258,29 @@ footer {
 
     border-top: 1px solid #292d31;
 
-    padding: 27px 10px 32px;
+    padding: 24px 10px 30px;
 
     color: #8d9298;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 footer strong {
     color: #f5b51b;
     font-family: "Oswald", sans-serif;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 footer p {
-    margin: 5px 0 8px;
+    margin: 4px 0 7px;
 
     color: #f5b51b;
     font-family: "Pacifico", cursive;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 footer span {
     display: block;
-    margin-top: 4px;
+    margin-top: 3px;
 }
 
 
@@ -288,113 +288,225 @@ footer span {
    TABLET
 ========================= */
 
-@media (max-width: 700px) {
-
-    .page {
-        width: calc(100% - 26px);
-    }
-
-    .menu-card {
-        grid-template-columns: 210px 1fr;
-    }
-
-    .category-image {
-        height: 190px;
-    }
-
-    .category-content {
-        padding: 20px;
-    }
-
-    .category-content h2 {
-        font-size: 26px;
-    }
-
-    .menu-row {
-        font-size: 14px;
-    }
-
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 560px) {
+@media (max-width: 600px) {
 
     .page {
         width: calc(100% - 20px);
     }
 
     .menu-header {
-        padding: 28px 0 24px;
+        padding: 28px 0 22px;
     }
 
     .logo {
-        width: 82px;
-        height: 82px;
-        margin-bottom: 14px;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
     }
 
     .menu-header h1 {
-        font-size: clamp(29px, 9vw, 38px);
+        font-size: clamp(28px, 9vw, 36px);
     }
 
     .tag {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .menu {
-        padding: 24px 0;
-        gap: 18px;
+        padding: 22px 0;
+        gap: 10px;
     }
 
+    /*
+       MOBILE:
+       Small image left
+       Menu list right
+    */
+
     .menu-card {
-        display: block;
-        border-radius: 16px;
+        grid-template-columns: 82px 1fr;
+        min-height: 105px;
+
+        border-radius: 11px;
     }
 
     .category-image {
-        height: 190px;
+        width: 82px;
+        height: 100%;
+        min-height: 105px;
     }
 
     .category-content {
-        padding: 17px 16px 19px;
+        padding: 10px 12px;
     }
 
     .category-content h2 {
-        font-size: 25px;
-        margin-bottom: 9px;
+        font-size: 21px;
+        margin-bottom: 4px;
     }
 
     .menu-row {
-        min-height: 45px;
-        font-size: 14px;
-        padding: 8px 0;
+        min-height: 32px;
+        padding: 3px 0;
+        font-size: 12.5px;
+        gap: 8px;
     }
 
-    .sizes {
-        gap: 5px;
-    }
-
-    .sizes div {
-        min-width: 53px;
-        padding: 4px 5px;
-    }
-
-    .sizes strong {
+    .price {
         font-size: 13px;
     }
 
+    .sizes {
+        gap: 3px;
+    }
+
+    .sizes div {
+        min-width: 43px;
+        padding: 2px 4px;
+        border-radius: 5px;
+    }
+
+    .sizes small {
+        font-size: 6px;
+    }
+
+    .sizes strong {
+        font-size: 10px;
+    }
+
     .back-home {
-        padding-bottom: 28px;
+        padding-top: 5px;
+        padding-bottom: 25px;
     }
 
     .back-home a {
         width: 100%;
     }
+}
 
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .page {
+        width: calc(100% - 16px);
+    }
+
+    .menu-header {
+        padding: 24px 0 20px;
+    }
+
+    .logo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .menu-header h1 {
+        font-size: 27px;
+    }
+
+    .tag {
+        font-size: 13px;
+    }
+
+    .menu {
+        gap: 8px;
+        padding: 18px 0;
+    }
+
+    .menu-card {
+        grid-template-columns: 72px 1fr;
+        min-height: 95px;
+    }
+
+    .category-image {
+        width: 72px;
+        min-height: 95px;
+    }
+
+    .category-content {
+        padding: 8px 10px;
+    }
+
+    .category-content h2 {
+        font-size: 19px;
+    }
+
+    .menu-row {
+        font-size: 11.5px;
+        min-height: 29px;
+    }
+
+    .price {
+        font-size: 12px;
+    }
+
+    .sizes div {
+        min-width: 40px;
+    }
+
+    .sizes strong {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.category-image {
+    width: 125px;
+    height: 125px;
+    background: #0d0f10;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    padding: 3px;
+}
+
+
+/* =========================
+   MOBILE IMAGE
+========================= */
+
+@media (max-width: 600px) {
+
+    .category-image {
+        width: 82px;
+        min-height: 105px;
+        height: 100%;
+
+        background: #0d0f10;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .category-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+
+        padding: 2px;
+    }
 }
 
 
@@ -402,43 +514,15 @@ footer span {
    SMALL MOBILE
 ========================= */
 
-@media (max-width: 360px) {
-
-    .page {
-        width: calc(100% - 16px);
-    }
-
-    .logo {
-        width: 74px;
-        height: 74px;
-    }
-
-    .menu-header h1 {
-        font-size: 28px;
-    }
-
-    .tag {
-        font-size: 13px;
-    }
+@media (max-width: 380px) {
 
     .category-image {
-        height: 165px;
+        width: 72px;
+        min-height: 95px;
     }
 
-    .category-content {
-        padding: 15px 13px 17px;
-    }
-
-    .category-content h2 {
-        font-size: 23px;
-    }
-
-    .menu-row {
-        font-size: 13px;
-    }
-
-    .sizes div {
-        min-width: 49px;
+    .category-image img {
+        padding: 2px;
     }
 
 }
