@@ -739,7 +739,7 @@ button {
         margin: 0 auto;
     }
 
-    .hero-copy > p {
+    .hero-copy>p {
         margin-left: auto;
         margin-right: auto;
     }
@@ -833,7 +833,7 @@ button {
         margin: 18px 0 12px;
     }
 
-    .hero-copy > p {
+    .hero-copy>p {
         font-size: 15px;
         line-height: 1.7;
     }
@@ -993,7 +993,7 @@ button {
         margin: 15px 0 10px;
     }
 
-    .hero-copy > p {
+    .hero-copy>p {
         font-size: 14px;
         line-height: 1.65;
     }
@@ -1240,7 +1240,7 @@ button {
         font-size: 16px;
     }
 
-    .hero-copy > p {
+    .hero-copy>p {
         font-size: 13px;
     }
 
@@ -1347,7 +1347,7 @@ button {
         font-size: clamp(46px, 9vw, 70px);
     }
 
-    .hero-copy > p {
+    .hero-copy>p {
         font-size: 13px;
     }
 
@@ -1362,6 +1362,7 @@ button {
 
 /* ---------- Touch devices ---------- */
 @media (hover: none) and (pointer: coarse) {
+
     .btn:hover,
     .menu-card:hover {
         transform: none;
@@ -1385,5 +1386,211 @@ button {
 
     footer {
         padding-bottom: max(23px, env(safe-area-inset-bottom));
+    }
+}
+
+/* =========================================================
+   GK ROYAL — ONLY ADDITIONS
+   Google Review + Food Licence
+   ========================================================= */
+
+.review-btn {
+    border-color: #4285f4;
+    color: #fff;
+}
+
+.review-btn:hover {
+    border-color: #4285f4;
+    background: rgba(66, 133, 244, .10);
+    box-shadow: 0 12px 28px rgba(66, 133, 244, .12);
+}
+
+/* ---------- FOOD LICENCE ---------- */
+
+.license-section {
+    background: #0b0d0e;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.license-card {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 28px;
+    align-items: center;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 30px;
+}
+
+.license-copy {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.license-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #211b0c;
+    border: 1px solid rgba(245, 181, 27, .30);
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.license-copy h3 {
+    font: 600 32px Oswald, sans-serif;
+    color: var(--cream);
+    margin-bottom: 8px;
+}
+
+.license-copy p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 620px;
+}
+
+.license-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.license-image {
+    background: #fff;
+    border-radius: 16px;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.license-image img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .license-card {
+        grid-template-columns: 1fr;
+    }
+
+    .license-image {
+        max-width: 380px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .license-card {
+        padding: 22px;
+        gap: 20px;
+        border-radius: 18px;
+    }
+
+    .license-copy {
+        gap: 12px;
+    }
+
+    .license-icon {
+        width: 43px;
+        height: 43px;
+        flex-basis: 43px;
+        font-size: 21px;
+    }
+
+    .license-copy h3 {
+        font-size: 29px;
+    }
+
+    .license-copy p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .license-actions .btn {
+        width: 100%;
+    }
+
+    .license-image img {
+        height: 220px;
+    }
+}
+
+/* ---------- OUR JOURNEY ---------- */
+
+.journey-highlight {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 26px 0 18px;
+    padding: 18px 20px;
+    background: rgba(245, 181, 27, 0.06);
+    border: 1px solid rgba(245, 181, 27, 0.20);
+    border-radius: 16px;
+}
+
+.journey-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.journey-item strong {
+    font: 700 24px Oswald, sans-serif;
+    color: var(--gold);
+    letter-spacing: .5px;
+}
+
+.journey-item span {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 1.2px;
+}
+
+.journey-divider {
+    width: 1px;
+    height: 42px;
+    background: var(--line);
+}
+
+.journey-text {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 620px;
+}
+
+@media (max-width: 600px) {
+    .journey-highlight {
+        gap: 15px;
+        padding: 16px;
+    }
+
+    .journey-item strong {
+        font-size: 20px;
+    }
+
+    .journey-item span {
+        font-size: 9px;
+    }
+
+    .journey-divider {
+        height: 36px;
+    }
+
+    .journey-text {
+        font-size: 13px;
     }
 }
